@@ -1,0 +1,11 @@
+@import "../../colors";
+
+.container {
+  height: calc(100vh - 60px);
+  background-color: $background;
+  flex: 1;
+}
+
+.routes {
+  width: 100%;
+}

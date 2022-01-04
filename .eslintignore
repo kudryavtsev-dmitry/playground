@@ -1,0 +1,7 @@
+dist
+node_modules
+*.generated.ts
+*.scss.d.ts
+build
+src/api/utils/*.mjs
+keycloak
