@@ -1,0 +1,84 @@
+@import "../../colors";
+.container{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height:100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 100;
+  transition: 0.3s ease-in;
+}
+.menuClosed {
+  width: 50px;
+  display: flex;
+  height: 100%;
+  top: 60px;
+  position: absolute;
+  & > div {
+    position: absolute;
+    background-color: $main;
+    height: 50px;
+    width: 50px;
+    border-radius: 0 50% 50% 0;
+    left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    transition: 0.3s ease-in;
+  };
+  &:hover {
+    & > div {
+      left: -0;
+      transition: 0.3s ease-in;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.closeMark {
+  & > div {
+    left: -50px !important;
+    transition: 0.3s ease-in;
+  }
+}
+
+.menu {
+  background-color: $main;
+  box-sizing: border-box;
+  width: 300px;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  height: calc(100% - 160px);
+  top: 50px;
+  margin-top: 50px;
+  left: -300px;
+  z-index: 99999;
+  transition: 0.3s  ease-in ;
+  .menuHeader {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.menuOpen {
+  transition:  0.3s .4s ease-in;
+  left: 0;
+}
+
+.listOfLinks{
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  a {
+    text-decoration: none;
+    color: #313131;
+  }
+}
+
+.activeLink {
+    color: white !important;
+}

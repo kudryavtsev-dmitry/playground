@@ -1,10 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers } from 'redux';
 
-export const store = configureStore({
-  reducer: {},
-});
+import { placesReducer } from './placesStore/reducer';
+import { menuStore } from './menuStore/reducer';
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch;
+export const rootReducer = combineReducers({ places: placesReducer, menu: menuStore });
+
+export type RootStateType = ReturnType<typeof rootReducer>;
+
+export type ActionType<T> = {
+  type: string;
+  payload: T;
+};

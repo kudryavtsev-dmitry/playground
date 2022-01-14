@@ -60,7 +60,8 @@
     "no-use-before-define": "off",
     "no-shadow": "off",
     "no-unused-vars": "off",
-
+    "default-param-last" : "off",
+    "@typescript-eslint/default-param-last": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/ban-types": "warn",
     "@typescript-eslint/no-use-before-define": "warn",
@@ -99,4 +100,6 @@
     "react/display-name": "off"
   },
   "plugins": ["prettier", "@typescript-eslint/eslint-plugin", "react", "import", "react-hooks", "jsx-a11y"]
+
+  
 }

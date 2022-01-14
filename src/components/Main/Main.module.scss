@@ -2,10 +2,12 @@
 
 .container {
   height: calc(100vh - 60px);
-  background-color: $background;
+  background-color: $mainDark;
   flex: 1;
+  display: flex;
 }
 
 .routes {
+  padding: 50px;
   width: 100%;
 }

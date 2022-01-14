@@ -11,7 +11,6 @@ export function App() {
     setOpen((prev) => !prev);
   };
 
-  console.log('open', open);
   return (
     <div>
       <Header handleOpenModal={handleOpen} />

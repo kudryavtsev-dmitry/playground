@@ -1,17 +1,21 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { TestPage } from '../../pages';
+import { Places } from '../../pages';
 import styles from './Main.module.scss';
-import { SideMenu } from './SideMenu';
+import { Menu } from '../Menu';
+import { Board } from '../../pages/Board';
 
 export const Main = () => (
   <div className={styles.container}>
-    <SideMenu />
+    <Menu />
     <div className={styles.routes}>
       <Switch>
-        <Route path="/">
-          <TestPage />
+        <Route exact path="/">
+          <Places />
+        </Route>
+        <Route path="/dashboard">
+          <Board />
         </Route>
       </Switch>
     </div>

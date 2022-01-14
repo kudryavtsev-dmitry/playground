@@ -6,7 +6,6 @@ import styles from './Modal.module.scss';
 const modalNode = document.getElementById('modal');
 
 export const Modal = ({ isOpen }: { isOpen: boolean }): JSX.Element => {
-  console.log('isOpen', isOpen);
   if (isOpen && modalNode) {
     return ReactDOM.createPortal(
       <div className={styles.container}>
